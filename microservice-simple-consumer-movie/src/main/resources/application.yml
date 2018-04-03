@@ -1,0 +1,5 @@
+server:
+  port: 8010
+  context-path: /
+user:
+  userServiceUrrl: http://localhost:8000/
