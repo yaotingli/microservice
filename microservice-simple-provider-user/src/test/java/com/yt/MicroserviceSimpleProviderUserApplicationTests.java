@@ -16,7 +16,7 @@ public class MicroserviceSimpleProviderUserApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		System.out.println(personService.queryPersonById("101"));
+		System.out.println("查询到数据：" + personService.queryPersonById("101"));
 	}
 
 }
