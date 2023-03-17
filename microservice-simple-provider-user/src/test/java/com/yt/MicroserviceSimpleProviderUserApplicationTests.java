@@ -1,6 +1,6 @@
 package com.yt;
 
-import com.yt.service.PersonService;
+import com.yt.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +12,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MicroserviceSimpleProviderUserApplicationTests {
 
 	@Autowired
-	PersonService personService;
+    UserService userService;
 
 	@Test
 	public void contextLoads() {
-		System.out.println("查询到数据为：" + personService.queryPersonById("101"));
+		System.out.println("查询到数据为：" + userService.queryUserById("101"));
 	}
 
 }

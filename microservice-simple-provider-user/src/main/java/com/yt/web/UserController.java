@@ -1,7 +1,7 @@
 package com.yt.web;
 
-import com.yt.model.Person;
-import com.yt.service.PersonService;
+import com.yt.model.TUser;
+import com.yt.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +19,12 @@ public class UserController {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    public PersonService personService;
+    public UserService userService;
 
     @RequestMapping("/{id}")
     @ResponseBody
-    public Person user(@PathVariable String id){
+    public TUser user(@PathVariable String id) {
         logger.info("id is :" + id);
-        return personService.queryPersonById(id);
+        return userService.queryUserById(id);
     }
 }
