@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.yt.cloud</groupId>
-        <artifactId>spring-example</artifactId>
+        <artifactId>spring-cloud-alibaba-example</artifactId>
         <version>1.0.0</version>
     </parent>
 
@@ -17,9 +17,9 @@
     <name>dubbo-nacos-example</name>
 
     <modules>
-        <module>dubbo-consumer</module>
         <module>dubbo-public-api</module>
         <module>dubbo-provider</module>
+        <module>dubbo-consumer</module>
     </modules>
 
     <properties>
@@ -36,6 +36,7 @@
 
     <dependencies>
 
+        <!-- nacos实现注册中心 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -48,6 +49,11 @@
             </exclusions>
         </dependency>
 
+        <!-- nacos实现配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
 
         <!--dubbo相关-->
         <dependency>

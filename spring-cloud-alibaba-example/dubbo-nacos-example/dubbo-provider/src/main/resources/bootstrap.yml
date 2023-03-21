@@ -4,12 +4,25 @@ server:
 spring:
   application:
     name: dubbo-provider
+  profiles:
+    active: dev
   cloud:
     nacos:
       discovery:
-        username: nacos
-        password: Aa111111
         server-addr: 124.221.99.45:8848
+        username: nacos
+        password: nacos
+        namespace: 8d16f8b3-f17e-4045-9828-c95e239f5594
+        register-enabled: true
+      config:
+        server-addr: 124.221.99.45:8848
+        username: nacos
+        password: nacos
+        namespace: 8d16f8b3-f17e-4045-9828-c95e239f5594
+        file-extension: yml
+        group: dev
+#        extension-configs: bootstrap-dev.yml
+        enable-remote-sync-config: true
 
 dubbo:
   registry:
