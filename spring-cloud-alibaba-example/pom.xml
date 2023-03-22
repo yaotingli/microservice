@@ -16,6 +16,7 @@
 
     <modules>
         <module>dubbo-nacos-example</module>
+        <module>nacos-gateway</module>
     </modules>
 
     <properties>

@@ -1,0 +1,22 @@
+server:
+  port: 8182
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - predicates:
+          - Path=/**  #匹配规则
+          uri: http://localhost:8180/env    #服务1的访问地址
+      discovery:
+        locator:
+          enabled: true
+    nacos:
+      discovery:
+        server-addr: 124.221.99.45:8848
+        username: nacos
+        password: nacos
+        namespace: 8d16f8b3-f17e-4045-9828-c95e239f5594
+  application:
+    name: nacos-gateway
+
