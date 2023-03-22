@@ -20,9 +20,10 @@ spring:
         password: nacos
         namespace: 8d16f8b3-f17e-4045-9828-c95e239f5594
         file-extension: yml
-        group: dev
-#        extension-configs: bootstrap-dev.yml
-        enable-remote-sync-config: true
+        refresh-enabled: true
+        shared-configs:
+        - dataId: bootstrap-dev.yml
+          group: dev
 
 dubbo:
   registry:
