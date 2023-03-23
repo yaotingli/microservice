@@ -17,6 +17,7 @@
     <modules>
         <module>dubbo-nacos-example</module>
         <module>nacos-gateway</module>
+        <module>openfeign-nacos-example</module>
     </modules>
 
     <properties>
