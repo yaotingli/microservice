@@ -1,0 +1,36 @@
+server:
+  port: 8187
+
+spring:
+  application:
+    name: yt-sentinel
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.221.99.45:8848
+        username: nacos
+        password: nacos
+        namespace: 8d16f8b3-f17e-4045-9828-c95e239f5594
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+      config:
+        enabled: false
+
+    sentinel:
+      transport:
+        dashboard: localhost:8181
+        port: 8182
+      datasource:
+        - nacos:
+            server-addr: 124.221.99.45:8848
+            username: nacos
+            password: nacos
+            namespace: 8d16f8b3-f17e-4045-9828-c95e239f5594
+            data-id: ${spring.application.name}-sentinel-flow
+            group-id: dev
+            data-type: json
+            rule-type: flow
+
+

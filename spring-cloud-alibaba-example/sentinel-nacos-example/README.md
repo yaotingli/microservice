@@ -1,0 +1,1 @@
+nohup java -jar -Dproject.name=sentinel-dashboard -Dcsp.sentinel.dashboard.server=localhost:8181 sentinel-dashboard-1.8.6.jar --server.port=8181  -Dsentinel.dashboard.auth.username=sentinel -Dsentinel.dashboard.auth.password=sentinel &> sentinel.log &
